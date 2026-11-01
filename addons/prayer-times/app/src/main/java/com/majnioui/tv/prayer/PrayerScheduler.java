@@ -228,10 +228,13 @@ public class PrayerScheduler {
                 Context appContext = ctx.getApplicationContext();
                 String day = new SimpleDateFormat("yyyy-MM-dd", Locale.ROOT).format(new Date());
                 String dayParam = new SimpleDateFormat("dd-MM-yyyy", Locale.ROOT).format(new Date());
+                String apiExtra = "";
+                int extraId = appContext.getResources().getIdentifier("api_extra", "string", appContext.getPackageName());
+                if (extraId != 0) apiExtra = appContext.getString(extraId);
                 String url = "https://api.aladhan.com/v1/timings/" + dayParam
                         + "?latitude=" + appContext.getString(R.string.latitude)
                         + "&longitude=" + appContext.getString(R.string.longitude)
-                        + "&method=" + appContext.getString(R.string.method);
+                        + "&method=" + appContext.getString(R.string.method) + apiExtra;
 
                 HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
                 c.setConnectTimeout(10000);

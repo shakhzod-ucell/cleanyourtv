@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Время намаза</string>
+    <string name="prayer_fajr">Фаджр</string>
+    <string name="prayer_sunrise">Восход</string>
+    <string name="prayer_dhuhr">Зухр</string>
+    <string name="prayer_asr">Аср</string>
+    <string name="prayer_maghrib">Магриб</string>
+    <string name="prayer_isha">Иша</string>
+    <string name="prayer_in">%1$s через %2$s</string>
+    <string name="prayer_tomorrow">%1$s завтра</string>
+    <string name="prayer_alert_badge">ВРЕМЯ НАМАЗА</string>
+    <string name="prayer_alert_title">Время намаза: %1$s</string>
+    <string name="prayer_alert_dismiss">%1$dс</string>
+    <string name="notification_title">Время намаза: %1$s</string>
+    <string name="notification_body">Время намаза %1$s (%2$s) в %3$s</string>
+    <string name="reminders_active">Напоминания активны</string>
+    <string name="updated_at">обновлено %1$s</string>
+    <string name="loading">Загрузка…</string>
+    <string name="offline">Нет связи с Aladhan. Показаны последние данные.</string>
+    <string name="unexpected_error">Неожиданный ответ от Aladhan.</string>
+</resources>

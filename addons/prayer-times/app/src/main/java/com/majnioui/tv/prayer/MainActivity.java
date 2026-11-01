@@ -132,10 +132,13 @@ public class MainActivity extends Activity {
         if (loading) return;
         loading = true;
         final String day = today();
+        String apiExtra = "";
+        int extraId = getResources().getIdentifier("api_extra", "string", getPackageName());
+        if (extraId != 0) apiExtra = getString(extraId);
         String url = "https://api.aladhan.com/v1/timings/"
                 + new SimpleDateFormat("dd-MM-yyyy", Locale.ROOT).format(new Date())
                 + "?latitude=" + getString(R.string.latitude) + "&longitude=" + getString(R.string.longitude)
-                + "&method=" + getString(R.string.method);
+                + "&method=" + getString(R.string.method) + apiExtra;
         new Thread(() -> {
             JSONObject json = null;
             try {
